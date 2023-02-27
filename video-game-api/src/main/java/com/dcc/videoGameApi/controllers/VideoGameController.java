@@ -26,9 +26,9 @@ public class VideoGameController {
     public List<VideoGame> findAllVideoGames() {
         return service.GetVideoGames(); }
 
-    @GetMapping("/getById/{Id}")
+    @GetMapping("/getById/{id}")
     public VideoGame findVideoGameById(@PathVariable Integer id) {
-        return service.getById(id);
+        return service.GetById(id);
     }
 
 }

@@ -24,7 +24,7 @@ public class VideoGameService {
         return videoGameRepository.findAll();
     }
 
-    public VideoGame getById(Integer id) {
+    public VideoGame GetById(Integer id) {
         return videoGameRepository.findById(id).orElse(null);
     }
 
