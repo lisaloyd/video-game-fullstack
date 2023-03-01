@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Chart } from "react-google-charts";
 
-const DisplayPlatformStats = ({ videoGames }) => {
+const DisplayPlatformStats = ({ videoGames=[] }) => {
   function generateDataFormChart() {
     //Filter the video game by year
-    let filteredGames = videoGames.filter((game) => game.year > 2013);
+    let filteredGames = videoGames.filter((game) => game.year >= 2013);
+
+    console.log(filteredGames)
 
     let platforms = filteredGames.map((game) => {
       return game.platform;
     });
-
-    //uniq = [...new Set(array)];
 
     let distinctPlatforms = [...new Set(platforms)];
 
@@ -19,10 +19,13 @@ const DisplayPlatformStats = ({ videoGames }) => {
    
      let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
 
+     let globalSalesForPlatform = allGamesForPlatform.reduce( (total,game) => total + game.globalsales, 0)
+
+
      //now we need to loop through allGamesForPlatform and sum each games global sales
 
     // Once we have the sum of all of those games global sales inserit it where '10' is
-     return [platform, 10, "silver"]
+     return [platform, globalSalesForPlatform, "silver"]
     }); 
 
     const data = [
