@@ -19,11 +19,11 @@ function App() {
 
   return (
     <div>
-      <Navbar bg='light' fixed='top'>
+      {/* <Navbar bg='light' fixed='top'>
         <Container>
           <Navbar.Brand>GameInfo</Navbar.Brand>
         </Container>
-      </Navbar>
+      </Navbar> */}
       <div>
         <DisplayPlatformStats videoGames={videoGames} />
         <VideoGameTable videoGames={videoGames} />
