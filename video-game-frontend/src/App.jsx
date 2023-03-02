@@ -25,6 +25,7 @@ async function getVideoGames() {
     <div>
         <DisplayPlatformStats videoGames={videoGames}/>
         <VideoGameTable videoGames={videoGames}/>
+        
     </div>
   );
 }
