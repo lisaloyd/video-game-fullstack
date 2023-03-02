@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './VideoGameTable.css';
 
 const VideoGameTable = ({ videoGames }) => {
   const videoGameRows = videoGames.map((videoGame) => (
