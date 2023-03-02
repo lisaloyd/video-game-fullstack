@@ -3,7 +3,6 @@ import axios from 'axios';
 import DisplayPlatformStats from './Components/DisplayPlatformStats/DisplayPlatformStats';
 import VideoGameTable from './Components/VideoGameTable/VideoGameTable';
 
-
 function App() {
 
 const [videoGames, setVideoGames] = useState([]);
@@ -27,6 +26,7 @@ async function getVideoGames() {
         <VideoGameTable videoGames={videoGames}/>
         
     </div>
+
   );
 }
 

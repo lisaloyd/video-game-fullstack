@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import './VideoGameTable.css';
+import Table from 'react-bootstrap/Table';
+// import './VideoGameTable.css';
 
 const VideoGameTable = ({ videoGames }) => {
   const videoGameRows = videoGames.map((videoGame) => (
@@ -13,7 +14,7 @@ const VideoGameTable = ({ videoGames }) => {
   ));
 
   return (
-    <table>
+    <Table bordered hover>
       <thead>
         <tr>
           <th>Name</th>
@@ -26,7 +27,7 @@ const VideoGameTable = ({ videoGames }) => {
       <tbody>
         {videoGameRows}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
