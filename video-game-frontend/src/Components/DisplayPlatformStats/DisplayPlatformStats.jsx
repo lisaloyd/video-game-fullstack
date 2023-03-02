@@ -6,7 +6,7 @@ const DisplayPlatformStats = ({ videoGames=[] }) => {
     //Filter the video game by year
     let filteredGames = videoGames.filter((game) => game.year >= 2013);
 
-    console.log(filteredGames)
+    
 
     let platforms = filteredGames.map((game) => {
       return game.platform;
@@ -33,7 +33,6 @@ const DisplayPlatformStats = ({ videoGames=[] }) => {
                 ...platformArrays
             ];
         
-            console.log("Data", data)
     
     return data;
   }

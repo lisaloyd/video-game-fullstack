@@ -4,6 +4,7 @@ import DisplayPlatformStats from "./Components/DisplayPlatformStats/DisplayPlatf
 import VideoGameTable from "./Components/VideoGameTable/VideoGameTable";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/esm/Container.js';
+import MostPopularPlatform from "./Components/MostPopularPlatform/MostPopularPlatform";
 
 function App() {
   const [videoGames, setVideoGames] = useState([]);
@@ -26,7 +27,9 @@ function App() {
       </Navbar> */}
       <div>
         <DisplayPlatformStats videoGames={videoGames} />
+        <MostPopularPlatform videoGames={videoGames} />
         <VideoGameTable videoGames={videoGames} />
+        
       </div>
     </div>
   );
