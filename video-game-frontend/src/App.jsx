@@ -26,6 +26,7 @@ function App() {
         </Container>
       </Navbar> */}
       <div>
+        <searchPage videoGames={videoGames}/>
         <DisplayPlatformStats videoGames={videoGames} />
         <MostPopularPlatform videoGames={videoGames} />
         <VideoGameTable videoGames={videoGames} />
